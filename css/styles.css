@@ -1,0 +1,26 @@
+/* 
+    author: Wilson Kinyua
+    email: wilsonkinyuam@gmail.com
+    license: MIT
+    description: All css for the app
+    create date: 30/07/2021
+*/
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
+
+/* body {
+    background-color: rgb(248, 239, 239);
+  } */
+
+/* logo  */
+.logo {
+  height: 50px;
+}
+
+.color-palace {
+    color: #fd9d3e;
+}
+
+.homepage h4 {
+    font-family: 'Faster One', cursive;
+}
