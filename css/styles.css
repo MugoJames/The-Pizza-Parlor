@@ -7,10 +7,14 @@
 */
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
-
-/* body {
-    background-color: rgb(248, 239, 239);
-  } */
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&family=Lobster&display=swap");
+body {
+  color: #4b4b4b;
+}
+p {
+  font-family: "Faster One", cursive;
+  font-family: "Lobster", cursive;
+}
 
 /* logo  */
 .logo {
@@ -18,9 +22,32 @@
 }
 
 .color-palace {
-    color: #fd9d3e;
+  color: #fd9d3e;
 }
 
 .homepage h4 {
-    font-family: 'Faster One', cursive;
+  font-family: "Faster One", cursive;
+}
+
+/* intro section */
+.intro h1 {
+  font-size: 4em;
+  line-height: 1.1em;
+  font-weight: 900;
+}
+
+.intro .small-image img {
+  height: 400px;
+}
+
+.intro p {
+  font-size: 21px;
+}
+
+.btn {
+  background-color: #ffc222;
+  outline: none;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: 500;
 }
