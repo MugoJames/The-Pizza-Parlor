@@ -136,6 +136,7 @@ $(function () {
         });
 
         $(".grand-total").html(`Ksh <span class="text-bold">${total}</span> `);
+
     }
 
     // initialize an empty cart
@@ -206,8 +207,8 @@ $(function () {
                 <td>Ksh ${pizza.price}</td>
             </tr>
         `);
-        // show checkout button
-        $(".delivery-button").show();
+            // show checkout button
+            $(".delivery-button").show();
             // console.log(pizza);
             //update grand total
             calculateGrandTotal();
@@ -237,13 +238,13 @@ $(function () {
         e.preventDefault();
         // check if the user has selected the radio button
         const selectd = $("input[name='deliveryMethod']:checked");
-        if(selectd.val() == undefined) {
+        if (selectd.val() == undefined) {
             $(".delivery-option").html("<p class='text-danger'>** Please select the delivery method **</p>");
             return;
         } else {
             $(".delivery-option").text("");
             // check which radio button was selected
-            if(selectd.val() == "delivery"){
+            if (selectd.val() == "delivery") {
                 $("#location-input-details").show();
                 // user inputs variables
                 const customerName = $("#customerName").val();
@@ -251,15 +252,24 @@ $(function () {
                 const customerLocation = $("#customerLocation").val();
                 const additionalInfo = $("#additionalInfo").val();
                 // validate user inputs
-                if(!customerName || !customerPhone || !customerLocation) {
+                if (!customerName || !customerPhone || !customerLocation) {
                     $(".error-delivery-location").text("Fill in all input fields with * to proceed!")
                     return;
                 } else {
                     $(".error-delivery-location").text("");
                 }
+                function calculateGrandTotal() {
+                    let total = 0;
+                    cart.forEach((pizza) => {
+                        total += pizza.price;
+                    });
+                    const getTotalPlusDeliveryFee = total + 128;
+                    console.log(getTotalPlusDeliveryFee);
+
+                }
+                calculateGrandTotal()
             }
         }
-        
+
     })
-    
 });
