@@ -97,4 +97,37 @@ const pizzaSizes = [
     { name: "Buffalo Chicken Sticks" },
   ];
   
- 
+  $(function () {
+    // append pizzas
+    pizzas.forEach((pizza) => {
+      $("#pizza").append(`<option value="${pizza.name}">${pizza.name}</option>`);
+    });
+    // append pizza sizes
+    pizzaSizes.forEach((pizzaSize) => {
+      $("#size").append(
+        `<option value="${pizzaSize.size}">${pizzaSize.size}-${pizzaSize.price}</option>`
+      );
+    });
+  
+    // append pizza crusts
+    pizzaCrusts.forEach((pizzaCrust) => {
+      $("#crust").append(
+        `<option value="${pizzaCrust.name}">${pizzaCrust.name}-${pizzaCrust.price}</option>`
+      );
+    });
+  
+    //append pizza toppings
+    pizzaToppings.forEach((topping) => {
+      $(".toppings").append(`<div class="col-md-6">
+        <div class="form-check">
+          <input class="form-check-input" name="toppings[]" type="checkbox" id="${topping}" value="${topping}">
+          <label class="form-check-label" for="${topping}">
+              ${topping}
+          </label>
+          </div>
+        </div>`);
+    });
+  
+    
+  });
+  
