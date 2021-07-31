@@ -97,3 +97,12 @@ tbody {
   font-size: 15px;
   text-transform: capitalize;
 }
+
+/* delivery modal */
+#location-input-details {
+  display: none;
+}
+
+.delivery-option {
+  font-size: 13px;
+}

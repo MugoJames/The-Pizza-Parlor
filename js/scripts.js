@@ -211,7 +211,7 @@ $(function () {
             // console.log(pizza);
             //update grand total
             calculateGrandTotal();
-            
+
         });
 
     });
@@ -231,5 +231,16 @@ $(function () {
         calculateGrandTotal();
     });
 
-
+    // delivery modal
+    $("#delivery-form").on("submit", function (e) {
+        //prevent default action
+        e.preventDefault();
+        // check if the user has selected the radio button
+        const selectd = $("input[name='deliveryMethod']:checked");
+        if(selectd.val() == undefined) {
+            $(".delivery-option").html("<p class='text-danger'>** Please select the delivery method **</p>");
+        }
+        // console.log(selectd.val());
+    })
+    
 });

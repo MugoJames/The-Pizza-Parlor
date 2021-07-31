@@ -175,27 +175,27 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>How do you want your order delivered?</p>
+                    <p>How do you want your order delivered? <span class="text-center">*</span></p>
+                    <p class="delivery-option text-danger"></p>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                            checked>
-                        <label class="form-check-label" for="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="deliveryMethod" id="deliveryMethod1" value="pickup">
+                        <label class="form-check-label" for="deliveryMethod1">
                             Pickup
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                        <label class="form-check-label" for="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" name="deliveryMethod" id="deliveryMethod2" value="delivery">
+                        <label class="form-check-label" for="deliveryMethod2">
                             Delivery to your home or office
                         </label>
                         <p>Please ensure you have entered your home or office address so that we can deliver to you
                             successfully. for <span class="color-palace">KSh 128</span></p>
                     </div>
                     <div class="location mt-5">
-                        <h5>Delivery Details</h5>
-                        <p class="text-danger">(Enter your details for the delivery location)</p>
                         <form id="delivery-form">
-                            <div class="row">
+                            <div id="location-input-details" class="row">
+                                <h5>Delivery Details</h5>
+                                <p class="text-danger">(Enter your details for the delivery location)</p>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Name <span
@@ -226,14 +226,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn" id="checkout-button">Checkout</button>
+                            </div>
                         </form>
-
-
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn">Checkout</button>
                 </div>
             </div>
         </div>
