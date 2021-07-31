@@ -138,7 +138,72 @@ const pizzaSizes = [
         $(".grand-total").text(total);
       }
     
+      // initialize an empty cart
+      const cart = [];
     
+      $("#order-form").on("submit", function (e) {
+        //prevent default action
+        e.preventDefault();
+    
+        const selectedPizzaName = $("#pizza").val();
+        const selectedSize = $("#size").val();
+        const selectedCrust = $("#crust").val();
+        const selectedToppings = $("input[name='toppings[]']:checkbox:checked")
+          .map(function () {
+            return $(this).val();
+          })
+          .get();
+    
+        // put validation for all fields
+    
+        // cart details
+        //check if selected pizza exists in cart
+        const cartPizza = cart.find((pizza) => {
+          const sameToppings =
+            JSON.stringify(pizza.toppings) == JSON.stringify(selectedToppings);
+    
+          return (
+            pizza.name == selectedPizzaName &&
+            pizza.size.size == selectedSize &&
+            sameToppings
+          );
+        });
+        //if it exists increase quantity
+        if (cartPizza) {
+          cartPizza.setQuantity(cartPizza.quantity + 1);
+        } else {
+          const pizza = new Pizza(selectedPizzaName);
+          pizza.setSize(selectedSize);
+          pizza.setCrust(selectedCrust); 
+          pizza.setTopings(selectedToppings);
+    
+          cart.push(pizza);
+        }
+        // empty tbody first
+        $(".order-table tbody").html("");
+        //loop and append
+        cart.forEach((pizza, cartIndex) => {
+          $(".order-table tbody").append(`
+            <tr>
+                <td>${pizza.name}</td>
+                <td>${pizza.size.size}</td>
+                <td>${pizza.crust.name}</td>
+                <td>${pizza.toppings.join(", ")}</td>
+                <td>
+                    <input type="number" min="1" class="input-sm form-control pizza-quantity" data-cart-index="${cartIndex}" value="${
+            pizza.quantity
+          }" />
+                </td>
+                <td>${pizza.price}</td>
+            </tr>
+        `);
+    
+          //update grand total
+          calculateGrandTotal();
+        });
+      });
+    
+     
     
   });
   
