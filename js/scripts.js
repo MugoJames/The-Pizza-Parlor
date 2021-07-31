@@ -154,8 +154,8 @@ $(function () {
             })
             .get();
 
-        // put validation for all fields
-
+        // validation for all fields
+            
         // cart details
         //check if selected pizza exists in cart
         const cartPizza = cart.find((pizza) => {
