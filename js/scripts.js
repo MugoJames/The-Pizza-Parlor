@@ -153,13 +153,12 @@ $(function () {
                 return $(this).val();
             })
             .get();
-
         // validation for all fields
-        if(selectedPizzaName == null || selectedSize == null || selectedCrust == null) {
-            $("#error-pizza").html("<p class='text-danger'>Please select this field.</p>");
-            $("#error-size").html("<p class='text-danger'>Please select this field.</p>");
-            $("#error-crust").html("<p class='text-danger'>Please select this field.</p>");
-            return false;
+        if (!selectedPizzaName || !selectedSize || !selectedCrust) {
+            $("#error").text("** Please select a pizza, size and crust 🙂** ");
+            return;
+        } else {
+            $("#error").text("");
         }
         // cart details
         //check if selected pizza exists in cart
