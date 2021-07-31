@@ -135,7 +135,7 @@ $(function () {
             total += pizza.price;
         });
 
-        $(".grand-total").text(total);
+        $(".grand-total").html(`Ksh <span class="text-bold">${total}</span> `);
     }
 
     // initialize an empty cart
