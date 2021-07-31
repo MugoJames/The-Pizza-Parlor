@@ -143,6 +143,7 @@ $(function () {
     // check if cart is empty
     if (cart.length == 0) {
         $(".empty-cart").show();
+        $(".delivery-button").hide();
     } else {
         $(".empty-cart").hide();
     }
@@ -205,7 +206,7 @@ $(function () {
                 <td>Ksh ${pizza.price}</td>
             </tr>
         `);
-
+        $(".delivery-button").show();
             // console.log(pizza);
             //update grand total
             calculateGrandTotal();
