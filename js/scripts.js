@@ -206,10 +206,12 @@ $(function () {
                 <td>Ksh ${pizza.price}</td>
             </tr>
         `);
+        // show checkout button
         $(".delivery-button").show();
             // console.log(pizza);
             //update grand total
             calculateGrandTotal();
+            
         });
 
     });
