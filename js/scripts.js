@@ -202,7 +202,7 @@ $(function () {
                     <input type="number" min="1" class="input-sm form-control pizza-quantity" data-cart-index="${cartIndex}" value="${pizza.quantity
                 }" />
                 </td>
-                <td>${pizza.price}</td>
+                <td>Ksh ${pizza.price}</td>
             </tr>
         `);
 
@@ -210,12 +210,6 @@ $(function () {
             //update grand total
             calculateGrandTotal();
         });
-        // The customer has an option for delivery and he/she is shown the price for delivery 
-        // if the customer has selected delivery option
-        if ($("#delivery").is(":checked")) {
-            const deliveryPrice = delivery.price;
-            $(".delivery-price").text(deliveryPrice);
-        }
 
     });
     //pizza quantity change event
@@ -227,7 +221,7 @@ $(function () {
         if (quantity > 0) {
             pizza.setQuantity(quantity);
             // update line total
-            $(this).parent().next().text(pizza.price);
+            $(this).parent().next().html(`Ksh <span class="text-bold">${pizza.price}</span> `);
         }
 
         //update grand total
