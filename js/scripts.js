@@ -52,3 +52,49 @@ Pizza.prototype.calculateTotal = function () {
 
     this.price *= this.quantity;
 };
+
+// pizza sizes
+const pizzaSizes = [
+    {
+      size: "small",
+      price: 600,
+    },
+    {
+      size: "medium",
+      price: 800,
+    },
+    {
+      size: "large",
+      price: 1200,
+    },
+  ];
+  
+  // pizza crusts
+  const pizzaCrusts = [
+    {
+      name: "crispy",
+      price: 200,
+    },
+    {
+      name: "stuffed",
+      price: 150,
+    },
+    {
+      name: "Glutten free",
+      price: 180,
+    },
+  ];
+  
+  //toppings
+  const pizzaToppings = ["Mushrooms", "Pineapple", "Bacon"];
+  
+  const pizzas = [
+    { name: "Chicken Tikka" },
+    { name: "PeriPeri Pizza" },
+    { name: "Raspberry Dessert Pizza" },
+    { name: "Chicken Alfredo Pizza" },
+    { name: "Sunchoke Pizza" },
+    { name: "Buffalo Chicken Sticks" },
+  ];
+  
+ 
