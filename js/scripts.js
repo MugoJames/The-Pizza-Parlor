@@ -202,7 +202,21 @@ const pizzaSizes = [
           calculateGrandTotal();
         });
       });
+     //pizza quantity change event
+     $("body").on("change", ".pizza-quantity", function () {
+        const quantity = $(this).val();
+        const cartIndex = $(this).data("cart-index");
+        const pizza = cart[cartIndex];
     
+        if (quantity > 0) {
+          pizza.setQuantity(quantity);
+          // update line total
+          $(this).parent().next().text(pizza.price);
+        }
+    
+        //update grand total
+        calculateGrandTotal();
+      });
      
     
   });
