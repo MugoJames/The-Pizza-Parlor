@@ -239,8 +239,27 @@ $(function () {
         const selectd = $("input[name='deliveryMethod']:checked");
         if(selectd.val() == undefined) {
             $(".delivery-option").html("<p class='text-danger'>** Please select the delivery method **</p>");
+            return;
+        } else {
+            $(".delivery-option").text("");
+            // check which radio button was selected
+            if(selectd.val() == "delivery"){
+                $("#location-input-details").show();
+                // user inputs variables
+                const customerName = $("#customerName").val();
+                const customerPhone = $("#customerPhone").val();
+                const customerLocation = $("#customerLocation").val();
+                const additionalInfo = $("#additionalInfo").val();
+                // validate user inputs
+                if(!customerName || !customerPhone || !customerLocation) {
+                    $(".error-delivery-location").text("Fill in all input fields with * to proceed!")
+                    return;
+                } else {
+                    $(".error-delivery-location").text("");
+                }
+            }
         }
-        // console.log(selectd.val());
+        
     })
     
 });
