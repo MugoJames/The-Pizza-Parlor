@@ -128,6 +128,17 @@ const pizzaSizes = [
         </div>`);
     });
   
+    // function to calculate grand total
+    function calculateGrandTotal() {
+        let total = 0;
+        cart.forEach((pizza) => {
+          total += pizza.price;
+        });
+    
+        $(".grand-total").text(total);
+      }
+    
+    
     
   });
   
