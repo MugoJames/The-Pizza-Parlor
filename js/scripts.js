@@ -155,7 +155,12 @@ $(function () {
             .get();
 
         // validation for all fields
-            
+        if(selectedPizzaName == null || selectedSize == null || selectedCrust == null) {
+            $("#error-pizza").html("<p class='text-danger'>Please select this field.</p>");
+            $("#error-size").html("<p class='text-danger'>Please select this field.</p>");
+            $("#error-crust").html("<p class='text-danger'>Please select this field.</p>");
+            return false;
+        }
         // cart details
         //check if selected pizza exists in cart
         const cartPizza = cart.find((pizza) => {

@@ -84,7 +84,7 @@ p {
 }
 
 /* order section */
-.error {
-  font-size: 1em;
+#error-pizza, #error-size, #error-crust {
+  font-size: 0.8em;
   font-weight: 500;
 }
