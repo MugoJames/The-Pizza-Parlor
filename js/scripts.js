@@ -140,7 +140,12 @@ $(function () {
 
     // initialize an empty cart
     const cart = [];
-
+    // check if cart is empty
+    if (cart.length == 0) {
+        $(".empty-cart").show();
+    } else {
+        $(".empty-cart").hide();
+    }
     $("#order-form").on("submit", function (e) {
         //prevent default action
         e.preventDefault();
@@ -201,9 +206,17 @@ $(function () {
             </tr>
         `);
 
+            // console.log(pizza);
             //update grand total
             calculateGrandTotal();
         });
+        // The customer has an option for delivery and he/she is shown the price for delivery 
+        // if the customer has selected delivery option
+        if ($("#delivery").is(":checked")) {
+            const deliveryPrice = delivery.price;
+            $(".delivery-price").text(deliveryPrice);
+        }
+
     });
     //pizza quantity change event
     $("body").on("change", ".pizza-quantity", function () {
