@@ -1,3 +1,9 @@
+// author: Wilson Kinyua
+// email: wilsonkinyuam@gmail.com
+// license: MIT
+// description: All scripts
+// create date: 30/07/2021
+
 // pizza constructor
 function Pizza(name) {
     this.name = name;
