@@ -2,7 +2,7 @@
 
 #### Created By Wilson Kinyua Muthoni on 30-07-2021
 ## Description
-Week 4 Independent Project | Pizza Palace at Moringa School Prep Module. A web application where your customers order different sizes of pizzas with one or more toppings. 
+Week 4 Independent Project | Pizza Palace at Moringa School Prep Module. A web application where customers order different sizes of pizzas with one or more toppings. 
 ## Setup Requirements
 * Git
 * Web-browser or your choice
@@ -26,24 +26,34 @@ Week 4 Independent Project | Pizza Palace at Moringa School Prep Module. A web a
 ## Some Screenshots
 * Homepage
 <img src="./img/screenshots/1.png" alt="screenshot" />
+
 * About section
 <img src="./img/screenshots/2.png" alt="screenshot" />
+
 * Order section
 <img src="./img/screenshots/3.png" alt="screenshot" />
+
 * Add to cart functionality
 <img src="./img/screenshots/4.png" alt="screenshot" />
+
 * Delivery checkout modal functionality
 <img src="./img/screenshots/5.png" alt="screenshot" /> 
+
 * Allowing customers to choose their delivery method
 <img src="./img/screenshots/6.png" alt="screenshot" />
+
 * Success checkout message functionality
 <img src="./img/screenshots/7.png" alt="screenshot" />
+
 * Form validation functionality
 <img src="./img/screenshots/8.png" alt="screenshot" />
+
 * Footer
 <img src="./img/screenshots/9.png" alt="screenshot" />
+
 * Fully responsive
 <img src="./img/screenshots/10.png" alt="screenshot" />
+
 * Succes message for pickup delivery method
 <img src="./img/screenshots/11.png" alt="screenshot" />
 
