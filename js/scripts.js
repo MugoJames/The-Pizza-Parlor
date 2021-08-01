@@ -265,6 +265,52 @@ $(function () {
                     });
                     const getTotalPlusDeliveryFee = total + 128;
                     console.log(getTotalPlusDeliveryFee);
+                    console.log(cart);
+                    $("#select-delivery-method").hide();
+                    $(".delivery-head").append(`
+                    <div class="alert alert-success" role="alert">Hello ${customerName}. Order successfully processed. Delivery on the way to your selected location(${customerLocation})🙂</div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h5>Order Summary 😇</h5>
+                            </div>
+                            <div>
+                                <p class="color-palace float-right">Total Ksh <span class="text-bold">${getTotalPlusDeliveryFee}</span></p>
+                            </div>
+                        </div>
+                    `);
+                    //loop and append
+                    cart.forEach((pizza, cartIndex) => {
+                        $(".delivery-bottom").append(`
+                        <div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ol class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">${pizza.name}(${pizza.size.size})</div>
+                                            Crust - ${pizza.crust.name} <br>
+                                            Toppings - ${pizza.toppings.join(", ")}
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">${pizza.quantity}</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                       </div>
+                        `);
+                    });
+
+                }
+                calculateGrandTotal()
+                // $("#deliveryMethodModal").hide();
+            } else if (selectd.val() == "pickup") {
+                function calculateGrandTotal() {
+                    let total = 0;
+                    cart.forEach((pizza) => {
+                        total += pizza.price;
+                    });
+                    const getTotalPlusDeliveryFee = total;
+                    console.log(getTotalPlusDeliveryFee);
 
                 }
                 calculateGrandTotal()
