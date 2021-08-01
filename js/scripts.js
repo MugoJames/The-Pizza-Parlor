@@ -274,7 +274,7 @@ $(function () {
                     console.log(cart);
                     $("#select-delivery-method").hide();
                     $(".delivery-head").append(`
-                    <div class="alert alert-success" role="alert">Hello ${customerName}. Order successfully processed. Delivery on the way to your selected location(${customerLocation})🙂</div>
+                    <div class="alert alert-success" role="alert">Hello ${customerName}. Order successfully processed. Your order will be delivered to your location(${customerLocation})🙂</div>
                         <div class="d-flex justify-content-between">
                             <div>
                                 <h5>Order Summary 😇</h5>
@@ -319,7 +319,7 @@ $(function () {
                     console.log(getTotalPlusDeliveryFee);
                     $("#select-delivery-method").hide();
                     $(".delivery-head").append(`
-                    <div class="alert alert-success" role="alert">Hello. Order successfully processed. Its ready for pickup 🙂</div>
+                    <div class="alert alert-success" role="alert">Hello. Order successfully processed. Your order will be delivered to your location 🙂</div>
                         <div class="d-flex justify-content-between">
                             <div>
                                 <h5>Order Summary 😇</h5>
