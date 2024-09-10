@@ -15,7 +15,7 @@
 
 ## Setup/Installation Requirements
 
-* Live link to view the project <a href="">View The Pizza Parlor</a>
+* Live link to view the project <a href="https://the-pizza-parlor.vercel.app/">View The Pizza Parlor</a>
 ## Some Screenshots
 * Homepage
 <img src="./img/screenshots/1.png" alt="screenshot" />
