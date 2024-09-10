@@ -63,20 +63,32 @@ Pizza.prototype.calculateTotal = function () {
 const pizzaSizes = [
     {
         size: "small",
-        price: 600,
-    },
-    {
-        size: "medium",
         price: 800,
     },
     {
-        size: "large",
+        size: "medium",
         price: 1200,
     },
+    {
+        size: "large",
+        price: 1500,
+    },
+    {
+        size: "X-large",
+        price: 1800,
+    }
 ];
 
 // pizza crusts
 const pizzaCrusts = [
+    {
+        name: "Thin",
+        price: 180,
+    },
+    {
+        name: "Thick",
+        price: 200,
+    },
     {
         name: "crispy",
         price: 200,
@@ -87,14 +99,15 @@ const pizzaCrusts = [
     },
     {
         name: "Glutten free",
-        price: 180,
+        price: 0,
     },
 ];
 
 //toppings
-const pizzaToppings = ["Mushrooms", "Pineapple", "Bacon"];
+const pizzaToppings = ["Mushrooms", "Pineapple", "Bacon" , "Onions", "Olives", "Pepperoni"];
 
 const pizzas = [
+    { name: "BBQ Chicken" },
     { name: "Chicken Tikka" },
     { name: "PeriPeri Pizza" },
     { name: "Raspberry Dessert Pizza" },
